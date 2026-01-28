@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://اسمك.github.io/simply-ai-pro-2026/sitemap.xml
+
+# Simply AI Pro 2026
+# تطبيق الذكاء الاصطناعي المتقدم
+# Developer: mais abbas
+# Contact: 0930127500
