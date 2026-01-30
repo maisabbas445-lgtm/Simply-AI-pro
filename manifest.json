@@ -1,0 +1,39 @@
+{
+  "name": "Simply AI Pro 2026",
+  "short_name": "Simply AI",
+  "description": "مساعد ذكي عربي مع تحليل المشاعر - مطور بواسطة MAIS ABBAS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/96/000000/artificial-intelligence.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "https://img.icons8.com/color/144/000000/artificial-intelligence.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://img.icons8.com/color/192/000000/artificial-intelligence.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://img.icons8.com/color/512/000000/artificial-intelligence.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "developer": {
+    "name": "MAIS ABBAS",
+    "url": "mailto:maisabbas445@gmail.com"
+  },
+  "categories": ["productivity", "utilities"],
+  "lang": "ar",
+  "dir": "rtl"
+}
