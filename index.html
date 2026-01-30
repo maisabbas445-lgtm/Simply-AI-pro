@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- معلومات المطور - مسجلة وموقعة -->
+    <meta name="author" content="MAIS ABBAS - مطور ويب وذكاء اصطناعي">
+    <meta name="email" content="maisabbas445@gmail.com">
+    <meta name="copyright" content="© 2026 MAIS ABBAS. جميع الحقوق محفوظة.">
+    
+    <!-- معلومات التطبيق -->
+    <meta name="description" content="Simply AI Pro 2026 - تجربة ذكاء اصطناعي مجانية بالعربية مع تحليل المشاعر المتقدم">
+    <meta name="keywords" content="AI, ChatGPT, Gemini, Arabic AI, Emotion Analysis, MAIS ABBAS, maisabbas445@gmail.com">
+    
+    <!-- Open Graph لوسائل التواصل -->
+    <meta property="og:title" content="Simply AI Pro 2026 | MAIS ABBAS">
+    <meta property="og:description" content="مساعد ذكي عربي مجاني من تطوير MAIS ABBAS">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.imgur.com/ai-image.jpg">
+    <meta property="og:url" content="https://maisabbas.github.io/simply-ai-pro-2026">
+    
+    <!-- PWA -->
+    <meta name="theme-color" content="#020617">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    
+    <title>Simply AI Pro 2026 | مساعد ذكي عربي | MAIS ABBAS</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Generative AI Library -->
+    <script src="https://unpkg.com/@google/generative-ai"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation"></div>
+    
+    <!-- Developer Signature -->
+    <div class="developer-signature">
+        <div class="signature-content">
+            <i class="fas fa-code"></i>
+            <span>تم التطوير بـ ❤️ بواسطة <strong>MAIS ABBAS</strong></span>
+            <a href="mailto:maisabbas445@gmail.com" class="dev-email">
+                <i class="fas fa-envelope"></i> maisabbas445@gmail.com
+            </a>
+        </div>
+    </div>
+    
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="ar">
+            <i class="fas fa-language"></i>
+            <span class="lang-text">عربي</span>
+        </button>
+        <button class="lang-btn" data-lang="en">
+            <i class="fas fa-language"></i>
+            <span class="lang-text">English</span>
+        </button>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-section">
+                <i class="fas fa-robot logo"></i>
+                <div class="title-container">
+                    <h1 class="app-title">Simply AI Pro 2026</h1>
+                    <div class="developer-credit">
+                        <i class="fas fa-crown"></i>
+                        من تطوير: <span class="dev-name">MAIS ABBAS</span>
+                        <i class="fas fa-envelope"></i> maisabbas445@gmail.com
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <button class="nav-btn active" data-page="setup">
+                    <i class="fas fa-key"></i>
+                    <span class="nav-text">إعداد المفتاح</span>
+                </button>
+                <button class="nav-btn" data-page="chat" id="chatNavBtn" style="display: none;">
+                    <i class="fas fa-comments"></i>
+                    <span class="nav-text">المحادثة</span>
+                </button>
+                <button class="nav-btn" data-page="analytics">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="nav-text">الإحصائيات</span>
+                </button>
+                <button class="nav-btn" data-page="guide">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="nav-text">دليل المفتاح</span>
+                </button>
+                <button class="nav-btn" data-page="about">
+                    <i class="fas fa-user-tie"></i>
+                    <span class="nav-text">عن المطور</span>
+                </button>
+                <button class="nav-btn" data-page="support">
+                    <i class="fas fa-headset"></i>
+                    <span class="nav-text">الدعم</span>
+                </button>
+            </nav>
+        </header>
+        
+        <!-- Pages -->
+        
+        <!-- Setup Page -->
+        <section id="setupPage" class="page active">
+            <div class="setup-page">
+                <div class="setup-header">
+                    <h2><i class="fas fa-key"></i> إعداد مفتاح Google AI</h2>
+                    <p class="setup-subtitle">أضف مفتاح Google Gemini API الخاص بك لبدء الاستخدام المجاني</p>
+                </div>
+                
+                <div class="setup-steps">
+                    <div class="setup-step">
+                        <h3><span class="step-number">1</span> أدخل مفتاح Google API</h3>
+                        <div class="key-input-container">
+                            <input type="password" id="apiKeyInput" 
+                                   placeholder="أدخل مفتاح Google AI API الذي يبدأ بـ AIza..." 
+                                   class="api-key-input">
+                            <button id="toggleKeyVisibility" class="toggle-key-btn">
+                                <i class="far fa-eye"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="key-validation">
+                            <div id="keyStatus" class="key-status">
+                                <i class="fas fa-info-circle"></i>
+                                <span>المفتاح غير مدخل</span>
+                            </div>
+                        </div>
+                        
+                        <button id="saveKeyBtn" class="primary-btn">
+                            <i class="fas fa-save"></i>
+                            حفظ المفتاح والبدء
+                        </button>
+                        
+                        <div class="key-info">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>المفتاح يتم تخزينه مشفراً في متصفحك فقط</span>
+                        </div>
+                    </div>
+                    
+                    <div class="setup-step">
+                        <h3><span class="step-number">2</span> طريقة الحصول على المفتاح المجاني</h3>
+                        <div class="key-guide-quick">
+                            <ol class="guide-steps">
+                                <li><i class="fas fa-sign-in-alt"></i> سجل الدخول بحساب Google</li>
+                                <li><i class="fas fa-external-link-alt"></i> اذهب إلى <a href="https://aistudio.google.com/apikey" target="_blank">Google AI Studio</a></li>
+                                <li><i class="fas fa-plus-circle"></i> اضغط على "Create API Key"</li>
+                                <li><i class="fas fa-copy"></i> انسخ المفتاح الذي يبدأ بـ <code>AIzaSy...</code></li>
+                                <li><i class="fas fa-paste"></i> الصق المفتاح في الأعلى</li>
+                            </ol>
+                        </div>
+                        <button id="showFullGuide" class="secondary-btn">
+                            <i class="fas fa-book"></i>
+                            عرض الدليل الكامل
+                        </button>
+                    </div>
+                    
+                    <div class="setup-step warning-step">
+                        <h3><span class="step-number">3</span> أو جرب النسخة التلقائية</h3>
+                        <p class="warning-text">
+                            <i class="fas fa-robot"></i>
+                            يمكنك تجربة التطبيق بدون مفتاح باستخدام نظام الردود الذكية المبرمجة مسبقاً.
+                        </p>
+                        <button id="useWithoutKeyBtn" class="warning-btn">
+                            <i class="fas fa-magic"></i>
+                            تجربة بدون مفتاح
+                        </button>
+                        <div class="warning-note">
+                            <i class="fas fa-info-circle"></i>
+                            النسخة التلقائية محدودة ولا تستخدم الذكاء الاصطناعي الحقيقي.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Developer Message -->
+                <div class="developer-message">
+                    <div class="dev-avatar-small">
+                        MA
+                    </div>
+                    <div class="dev-message-content">
+                        <h4><i class="fas fa-heart"></i> رسالة من المطور MAIS ABBAS</h4>
+                        <p>أقدم لكم هذا التطبيق مجاناً لتجربة أفضل ما في الذكاء الاصطناعي. كل مفتاح تضيفه يظل سرياً في جهازك فقط. استمتع بالتجربة!</p>
+                        <div class="dev-contact-small">
+                            <i class="fas fa-envelope"></i> maisabbas445@gmail.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Chat Page -->
+        <section id="chatPage" class="page">
+            <div class="chat-page">
+                <!-- Chat Container -->
+                <div class="chat-container">
+                    <!-- Chat Header -->
+                    <div class="chat-header">
+                        <div class="chat-status">
+                            <div class="status-indicator active"></div>
+                            <span id="chatStatus">متصل بالذكاء الاصطناعي</span>
+                        </div>
+                        <div class="chat-mode">
+                            <span id="chatMode">
+                                <i class="fas fa-key"></i> وضع المفتاح المباشر
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Messages Container -->
+                    <div class="messages-container" id="messagesContainer">
+                        <!-- Welcome Message -->
+                        <div class="message ai welcome-message">
+                            <div class="message-header">
+                                <div class="message-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div>
+                                    <strong>Simply AI Pro</strong>
+                                    <span class="message-time" id="welcomeTime"></span>
+                                </div>
+                            </div>
+                            <div class="message-content">
+                                <div class="welcome-content">
+                                    <h3><i class="fas fa-hand-wave"></i> أهلاً بك في Simply AI Pro 2026!</h3>
+                                    <p>أنا مساعدك الذكي المطور بواسطة <strong>MAIS ABBAS</strong>. يمكنك التحدث معي باللغة العربية أو الإنجليزية.</p>
+                                    
+                                    <div class="welcome-features">
+                                        <div class="feature">
+                                            <i class="fas fa-comment-alt"></i>
+                                            <span>محادثة ذكية مع تحليل المشاعر</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-key"></i>
+                                            <span>مفتاحك: <span id="keyPreview">غير مضاف</span></span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-envelope"></i>
+                                            <span>الدعم: maisabbas445@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="welcome-tip">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <strong>نصيحة:</strong> اكتب "مرحبا" أو اسألني أي شيء تريده!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sentiment Analysis -->
+                    <div class="sentiment-bar" id="sentimentBar">
+                        <div class="sentiment-result">
+                            <span class="sentiment-emoji" id="sentimentEmoji">😐</span>
+                            <div class="sentiment-details">
+                                <div class="sentiment-text" id="sentimentText">المشاعر: محايدة</div>
+                                <div class="sentiment-quote" id="sentimentQuote">"كل رحلة تبدأ بخطوة"</div>
+                            </div>
+                        </div>
+                        <div class="sentiment-progress">
+                            <div class="progress-label">قوة المشاعر</div>
+                            <div class="progress-bar-small">
+                                <div class="progress-fill-small" id="sentimentProgress" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Message Tools -->
+                    <div class="message-tools">
+                        <button id="regenerateBtn" class="tool-btn" title="إعادة توليد آخر رد">
+                            <i class="fas fa-redo"></i>
+                            <span class="tool-text">إعادة توليد</span>
+                        </button>
+                        <button id="copyLastBtn" class="tool-btn" title="نسخ آخر رد">
+                            <i class="far fa-copy"></i>
+                            <span class="tool-text">نسخ الرد</span>
+                        </button>
+                        <button id="shareChatBtn" class="tool-btn" title="مشاركة المحادثة">
+                            <i class="fas fa-share-alt"></i>
+                            <span class="tool-text">مشاركة</span>
+                        </button>
+                        <button id="clearChatBtn" class="tool-btn" title="مسح المحادثة">
+                            <i class="fas fa-trash"></i>
+                            <span class="tool-text">مسح المحادثة</span>
+                        </button>
+                        <button id="suggestQuestionsBtn" class="tool-btn" title="اقتراح أسئلة">
+                            <i class="fas fa-lightbulb"></i>
+                            <span class="tool-text">اقتراح أسئلة</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Input Section -->
+                    <div class="input-section">
+                        <div class="input-container">
+                            <textarea id="messageInput" 
+                                      placeholder="اكتب رسالتك هنا... (100 رسالة مجانية يومياً)"
+                                      maxlength="2000"
+                                      rows="1"
+                                      aria-label="حقل إدخال الرسالة"></textarea>
+                            <div class="input-actions">
+                                <button id="voiceInputBtn" class="action-btn" title="إدخال صوتي">
+                                    <i class="fas fa-microphone"></i>
+                                </button>
+                                <button id="attachBtn" class="action-btn" title="إرفاق ملف">
+                                    <i class="fas fa-paperclip"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button id="sendBtn" class="send-btn" aria-label="إرسال الرسالة">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Usage Info -->
+                    <div class="usage-info">
+                        <div class="usage-item">
+                            <i class="fas fa-comment"></i>
+                            <span>المتبقي اليوم: <strong id="remainingToday">100</strong></span>
+                        </div>
+                        <div class="usage-item">
+                            <i class="fas fa-clock"></i>
+                            <span>يعاد التحميل: <strong id="resetTimeDisplay">24:00:00</strong></span>
+                        </div>
+                        <div class="usage-item">
+                            <i class="fas fa-user-tie"></i>
+                            <span>المطور: <strong>MAIS ABBAS</strong></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- User Info -->
+                    <div class="sidebar-section user-info">
+                        <div class="user-header">
+                            <div class="user-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="user-details">
+                                <div class="user-name">مستخدم Simply AI</div>
+                                <div class="user-id" id="userId">ID: Loading...</div>
+                            </div>
+                        </div>
+                        <div class="user-stats">
+                            <div class="user-stat">
+                                <i class="fas fa-key"></i>
+                                <span>حالة المفتاح: <span id="keyStatusBadge" class="status-badge">غير مضاف</span></span>
+                            </div>
+                            <div class="user-stat">
+                                <i class="fas fa-calendar"></i>
+                                <span>تاريخ الانضمام: <span id="joinDate">اليوم</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Daily Usage -->
+                    <div class="sidebar-section usage-counter">
+                        <h3>
+                            <i class="fas fa-chart-bar"></i>
+                            <span>الاستخدام اليومي</span>
+                        </h3>
+                        <div class="usage-progress">
+                            <div class="progress-header">
+                                <span>الرسائل المستخدمة</span>
+                                <span id="usageCount">0/100</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="dailyProgress" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-footer">
+                                <span id="usagePercentage">0%</span>
+                                <span id="timeRemaining">يعاد بعد: 24:00:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="usage-tips">
+                            <i class="fas fa-tips"></i>
+                            <span>نصيحة: يمكنك الحصول على مفتاح مجاني من دليل المفتاح</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Sentiment Stats -->
+                    <div class="sidebar-section sentiment-stats">
+                        <h3>
+                            <i class="fas fa-heart"></i>
+                            <span>تحليل مشاعرك</span>
+                        </h3>
+                        <div class="stats-grid">
+                            <div class="stat-item positive">
+                                <span class="stat-emoji">😊</span>
+                                <div class="stat-info">
+                                    <span class="stat-count" id="positiveCount">0</span>
+                                    <span class="stat-label">إيجابي</span>
+                                </div>
+                            </div>
+                            <div class="stat-item neutral">
+                                <span class="stat-emoji">😐</span>
+                                <div class="stat-info">
+                                    <span class="stat-count" id="neutralCount">0</span>
+                                    <span class="stat-label">محايد</span>
+                                </div>
+                            </div>
+                            <div class="stat-item negative">
+                                <span class="stat-emoji">😔</span>
+                                <div class="stat-info">
+                                    <span class="stat-count" id="negativeCount">0</span>
+                                    <span class="stat-label">سلبي</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sentiment-chart-container">
+                            <canvas id="sentimentChartMini" width="250" height="100"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- Management Tools -->
+                    <div class="sidebar-section management-tools">
+                        <h3>
+                            <i class="fas fa-cog"></i>
+                            <span>أدوات التحكم</span>
+                        </h3>
+                        <div class="tools-grid">
+                            <button id="manageKeyBtn" class="tool-btn-sm">
+                                <i class="fas fa-key"></i>
+                                <span>إدارة المفتاح</span>
+                            </button>
+                            <button id="exportBtn" class="tool-btn-sm">
+                                <i class="fas fa-download"></i>
+                                <span>تصدير المحادثة</span>
+                            </button>
+                            <button id="themeToggle" class="tool-btn-sm">
+                                <i class="fas fa-moon"></i>
+                                <span>تغيير المظهر</span>
+                            </button>
+                            <button id="resetDataBtn" class="tool-btn-sm">
+                                <i class="fas fa-redo-alt"></i>
+                                <span>إعادة ضبط</span>
+                            </button>
+                        </div>
+                        
+                        <div class="developer-info">
+                            <div class="dev-info-item">
+                                <i class="fas fa-code"></i>
+                                <span>مطور التطبيق:</span>
+                            </div>
+                            <div class="dev-info-item">
+                                <strong>MAIS ABBAS</strong>
+                            </div>
+                            <div class="dev-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:maisabbas445@gmail.com">maisabbas445@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Analytics Page -->
+        <section id="analyticsPage" class="page">
+            <div class="analytics-page">
+                <div class="analytics-header">
+                    <h2><i class="fas fa-chart-line"></i> الإحصائيات والتحليلات المتقدمة</h2>
+                    <p class="analytics-subtitle">تحليل شامل لاستخدامك واتجاهات المحادثة</p>
+                </div>
+                
+                <div class="stats-grid-large">
+                    <div class="stat-card primary">
+                        <div class="stat-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>إجمالي الرسائل</h4>
+                            <div class="stat-value" id="totalMessages">0</div>
+                            <div class="stat-trend">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+0 هذا الأسبوع</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card success">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>الرسائل اليوم</h4>
+                            <div class="stat-value" id="todayMessages">0</div>
+                            <div class="stat-progress">
+                                <div class="progress-bar-tiny">
+                                    <div class="progress-fill-tiny" id="todayProgress" style="width: 0%"></div>
+                                </div>
+                                <span id="todayPercent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card warning">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>المشاعر الإيجابية</h4>
+                            <div class="stat-value" id="positivePercent">0%</div>
+                            <div class="stat-description">
+                                <i class="fas fa-smile"></i>
+                                <span>من محادثاتك كانت إيجابية</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card info">
+                        <div class="stat-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>الاستخدام الفعال</h4>
+                            <div class="stat-value" id="usageEfficiency">0%</div>
+                            <div class="stat-description">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>من السعة اليومية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Detailed Charts -->
+                <div class="charts-container">
+                    <div class="chart-section">
+                        <h3><i class="fas fa-chart-bar"></i> توزيع المشاعر</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="sentimentChartCanvas" width="800" height="300"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-section">
+                        <h3><i class="fas fa-chart-line"></i> نشاط المحادثة</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="activityChartCanvas" width="800" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Developer Signature in Analytics -->
+                <div class="analytics-footer">
+                    <div class="dev-signature-analytics">
+                        <div class="signature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="signature-text">
+                            <h4>تحليلات متقدمة من Simply AI Pro 2026</h4>
+                            <p>تم تطوير جميع أنظمة التحليل بواسطة <strong>MAIS ABBAS</strong></p>
+                            <div class="signature-contact">
+                                <i class="fas fa-envelope"></i>
+                                <span>للتواصل: maisabbas445@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Guide Page -->
+        <section id="guidePage" class="page">
+            <div class="guide-page">
+                <div class="guide-header">
+                    <h2><i class="fas fa-graduation-cap"></i> الدليل الشامل للحصول على المفتاح المجاني</h2>
+                    <p class="guide-subtitle">خطوة بخطوة مع صور توضيحية للحصول على مفتاح Google Gemini API مجاناً</p>
+                </div>
+                
+                <!-- Developer Intro -->
+                <div class="guide-developer-intro">
+                    <div class="dev-intro-content">
+                        <div class="dev-intro-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h3>دليل مقدم من المطور MAIS ABBAS</h3>
+                            <p>صممت هذا الدليل لمساعدتك في الحصول على أفضل تجربة مع الذكاء الاصطناعي. كل الخطوات مجربة ومضمونة.</p>
+                            <div class="dev-intro-contact">
+                                <i class="fas fa-envelope"></i> <strong>لأي استفسار:</strong> maisabbas445@gmail.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Key Benefits -->
+                <div class="key-benefits">
+                    <h3><i class="fas fa-gift"></i> فوائد المفتاح المجاني:</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit">
+                            <i class="fas fa-comments"></i>
+                            <h4>100 رسالة يومياً</h4>
+                            <p>حد مجاني يكفي لمعظم الاستخدامات</p>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-bolt"></i>
+                            <h4>سرعة عالية</h4>
+                            <p>ردود فورية من Google AI</p>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>أمان كامل</h4>
+                            <p>المفتاح يبقى في متصفحك فقط</p>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-infinity"></i>
+                            <h4>مجاني للأبد</h4>
+                            <p>لا تجديد ولا اشتراكات</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Steps -->
+                <div class="steps-container" id="stepsContainer">
+                    <!-- Steps will be loaded dynamically -->
+                </div>
+                
+                <!-- Common Issues -->
+                <div class="common-issues">
+                    <h3><i class="fas fa-exclamation-triangle"></i> المشاكل الشائعة والحلول:</h3>
+                    <div class="issues-list">
+                        <div class="issue">
+                            <div class="issue-header">
+                                <i class="fas fa-key"></i>
+                                <h4>المفتاح لا يعمل</h4>
+                            </div>
+                            <div class="issue-solution">
+                                <p><strong>الحل:</strong> تأكد من نسخ المفتاح كاملاً. يجب أن يبدأ بـ <code>AIzaSy</code> ويتكون من 39-45 حرفاً.</p>
+                            </div>
+                        </div>
+                        <div class="issue">
+                            <div class="issue-header">
+                                <i class="fas fa-ban"></i>
+                                <h4>وصلت للحد اليومي</h4>
+                            </div>
+                            <div class="issue-solution">
+                                <p><strong>الحل:</strong> الانتظار 24 ساعة أو إنشاء حساب Google جديد للحصول على مفتاح إضافي.</p>
+                            </div>
+                        </div>
+                        <div class="issue">
+                            <div class="issue-header">
+                                <i class="fas fa-question-circle"></i>
+                                <h4>لا أعرف مكان المفتاح</h4>
+                            </div>
+                            <div class="issue-solution">
+                                <p><strong>الحل:</strong> اذهب إلى <a href="https://aistudio.google.com/apikey" target="_blank">هذا الرابط</a> وانقر على Create API Key.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Developer Final Message -->
+                <div class="developer-final-message">
+                    <div class="final-message-content">
+                        <div class="final-avatar">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="final-text">
+                            <h4><i class="fas fa-heart"></i> رسالة أخيرة من المطور</h4>
+                            <p>لقد صممت هذا التطبيق ليكون الأفضل عربياً في مجال الذكاء الاصطناعي. كل ميزة وضعت بعناية لتجربة سلسة. لا تتردد في التواصل معي لأي ملاحظة أو اقتراح.</p>
+                            <div class="final-contact">
+                                <i class="fas fa-envelope"></i> <strong>MAIS ABBAS</strong> - maisabbas445@gmail.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Page -->
+        <section id="aboutPage" class="page">
+            <div class="about-page">
+                <div class="about-header">
+                    <h2><i class="fas fa-user-tie"></i> عن المطور MAIS ABBAS</h2>
+                    <p class="about-subtitle">مطور ويب وذكاء اصطناعي متخصص في التطبيقات العربية</p>
+                </div>
+                
+                <!-- Developer Profile -->
+                <div class="developer-profile">
+                    <div class="profile-header">
+                        <div class="profile-avatar-large">
+                            <span>MA</span>
+                            <div class="verified-badge">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h1>MAIS ABBAS</h1>
+                            <div class="profile-title">
+                                <i class="fas fa-code"></i>
+                                مطور تطبيقات الذكاء الاصطناعي والويب
+                            </div>
+                            <div class="profile-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:maisabbas445@gmail.com">maisabbas445@gmail.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-globe"></i>
+                                    <span>متخصص في التطوير العربي</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-bio">
+                        <h3><i class="fas fa-quote-right"></i> نبذة عني</h3>
+                        <p>
+                            مطور ويب وذكاء اصطناعي متخصص في إنشاء تجارب عربية فريدة. 
+                            أؤمن بقوة التكنولوجيا في تغيير العالم العربي، وأسعى دائماً لتقديم 
+                            أفضل الحلول التقنية التي تلبي احتياجات المستخدم العربي بجودة عالمية.
+                        </p>
+                        
+                        <p>
+                            Simply AI Pro 2026 هو ثمرة جهودي لتقديم أفضل تجربة ذكاء اصطناعي 
+                            للمستخدم العربي بأسلوب عصري وسهل. كل خطوة في التطبيق صممت بعناية 
+                            لضمان تجربة سلسة وممتعة.
+                        </p>
+                    </div>
+                    
+                    <div class="profile-skills">
+                        <h3><i class="fas fa-cogs"></i> المهارات والخبرات</h3>
+                        <div class="skills-grid">
+                            <div class="skill">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>تطوير الويب</h4>
+                                    <p>HTML, CSS, JavaScript, React</p>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>الذكاء الاصطناعي</h4>
+                                    <p>APIs, Machine Learning, NLP</p>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>تطبيقات الجوال</h4>
+                                    <p>PWA, Responsive Design</p>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>تصميم الواجهات</h4>
+                                    <p>UI/UX, Modern Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-projects">
+                        <h3><i class="fas fa-project-diagram"></i> مشاريع بارزة</h3>
+                        <div class="projects-grid">
+                            <div class="project">
+                                <div class="project-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="project-info">
+                                    <h4>Simply AI Pro 2026</h4>
+                                    <p>مساعد ذكي عربي متكامل مع تحليل المشاعر</p>
+                                </div>
+                            </div>
+                            <div class="project">
+                                <div class="project-icon">
+                                    <i class="fas fa-language"></i>
+                                </div>
+                                <div class="project-info">
+                                    <h4>منصات عربية</h4>
+                                    <p>تطوير منصات تعليمية وتجارية عربية</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Developer Message -->
+                    <div class="profile-message">
+                        <div class="message-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="message-content">
+                            <h3><i class="fas fa-comment"></i> رسالة من القلب</h3>
+                            <p>
+                                "أقدم لكم هذا التطبيق بكل حب وإخلاص، آمل أن يكون وسيلة مفيدة 
+                                لكم في رحلتكم مع الذكاء الاصطناعي. كل تحديث وكل تحسين أضعه 
+                                هنا يأتي من حرصي على تقديم الأفضل للمستخدم العربي."
+                            </p>
+                            <div class="signature">
+                                <strong>MAIS ABBAS</strong>
+                                <span>maisabbas445@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <h3><i class="fas fa-envelope"></i> تواصل مع المطور</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="contactName" placeholder="اسمك" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="contactEmail" placeholder="بريدك الإلكتروني" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="contactMessage" placeholder="رسالتك..." rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                إرسال الرسالة
+                            </button>
+                        </form>
+                        <div class="form-note">
+                            <i class="fas fa-info-circle"></i>
+                            جميع الرسائل تصل مباشرة إلى: maisabbas445@gmail.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Support Page -->
+        <section id="supportPage" class="page">
+            <div class="support-page">
+                <div class="support-header">
+                    <h2><i class="fas fa-headset"></i> مركز الدعم والمساعدة</h2>
+                    <p class="support-subtitle">ابحث عن إجابات لأسئلتك أو تواصل مع الدعم المباشر</p>
+                </div>
+                
+                <!-- Developer Support Banner -->
+                <div class="dev-support-banner">
+                    <div class="banner-content">
+                        <div class="banner-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="banner-text">
+                            <h3>دعم مباشر من المطور</h3>
+                            <p>جميع استفساراتك تجيب عليها مباشرة: <strong>MAIS ABBAS</strong></p>
+                            <div class="banner-contact">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:maisabbas445@gmail.com">maisabbas445@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Help -->
+                <div class="quick-help">
+                    <h3><i class="fas fa-life-ring"></i> مساعدة سريعة</h3>
+                    <div class="help-actions">
+                        <button class="help-action" data-help="key">
+                            <i class="fas fa-key"></i>
+                            مشكلة في المفتاح
+                        </button>
+                        <button class="help-action" data-help="messages">
+                            <i class="fas fa-comments"></i>
+                            انتهت الرسائل
+                        </button>
+                        <button class="help-action" data-help="chat">
+                            <i class="fas fa-robot"></i>
+                            مشكلة في المحادثة
+                        </button>
+                        <button class="help-action" data-help="other">
+                            <i class="fas fa-question-circle"></i>
+                            مشكلة أخرى
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <h3><i class="fas fa-question-circle"></i> الأسئلة الشائعة</h3>
+                    
+                    <div class="faq-container">
+                        <!-- FAQ items will be loaded dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Contact Support -->
+                <div class="contact-support">
+                    <div class="contact-header">
+                        <i class="fas fa-comments"></i>
+                        <h3>لم تجد إجابتك؟ تواصل معنا</h3>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>البريد الإلكتروني</h4>
+                                <p>للأسئلة الفنية والاستفسارات</p>
+                                <a href="mailto:maisabbas445@gmail.com" class="method-link">
+                                    maisabbas445@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>اقتراحات وتحسينات</h4>
+                                <p>شاركنا أفكارك لتطوير التطبيق</p>
+                                <button id="suggestFeature" class="method-btn">
+                                    <i class="fas fa-bullhorn"></i>
+                                    قدم اقتراحاً
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Developer Promise -->
+                    <div class="dev-promise">
+                        <div class="promise-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="promise-text">
+                            <h4>وعد من المطور MAIS ABBAS</h4>
+                            <p>ألتزم بالرد على جميع استفساراتكم خلال 24 ساعة. تطويركم هو أولويتي.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Report Issue -->
+                <div class="report-issue">
+                    <h3><i class="fas fa-bug"></i> الإبلاغ عن مشكلة</h3>
+                    <form id="issueReportForm" class="issue-form">
+                        <div class="form-group">
+                            <select id="issueType" required>
+                                <option value="">اختر نوع المشكلة</option>
+                                <option value="technical">مشكلة تقنية</option>
+                                <option value="key">مشكلة في المفتاح</option>
+                                <option value="ui">مشكلة في الواجهة</option>
+                                <option value="performance">مشكلة في الأداء</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="issueDescription" placeholder="صف المشكلة بالتفصيل..." rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="issueEmail" placeholder="بريدك للرد عليك" required>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال التقرير
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-robot"></i>
+                    <div class="footer-title">
+                        <h3>Simply AI Pro 2026</h3>
+                        <p>مساعد ذكي عربي مجاني</p>
+                    </div>
+                </div>
+                <div class="footer-developer">
+                    <div class="dev-signature">
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <strong>مطور التطبيق:</strong>
+                            <div class="dev-name">MAIS ABBAS</div>
+                            <div class="dev-email">maisabbas445@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>التطبيق</h4>
+                    <a href="#" class="footer-link" data-page="chat">
+                        <i class="fas fa-comments"></i>
+                        المحادثة
+                    </a>
+                    <a href="#" class="footer-link" data-page="analytics">
+                        <i class="fas fa-chart-line"></i>
+                        الإحصائيات
+                    </a>
+                    <a href="#" class="footer-link" data-page="guide">
+                        <i class="fas fa-key"></i>
+                        دليل المفتاح
+                    </a>
+                </div>
+                
+                <div class="links-column">
+                    <h4>الدعم</h4>
+                    <a href="#" class="footer-link" data-page="guide">
+                        <i class="fas fa-graduation-cap"></i>
+                        التعليمات
+                    </a>
+                    <a href="#" class="footer-link" data-page="support">
+                        <i class="fas fa-headset"></i>
+                        مركز الدعم
+                    </a>
+                    <a href="#" class="footer-link" data-page="about">
+                        <i class="fas fa-user-tie"></i>
+                        عن المطور
+                    </a>
+                </div>
+                
+                <div class="links-column">
+                    <h4>المطور</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-user"></i>
+                            <span>MAIS ABBAS</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:maisabbas445@gmail.com">maisabbas445@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-code"></i>
+                            <span>مطور ويب وذكاء اصطناعي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                <i class="fas fa-copyright"></i>
+                <span>© 2026 Simply AI Pro. جميع الحقوق محفوظة.</span>
+            </div>
+            <div class="developer-credit">
+                <i class="fas fa-heart"></i>
+                <span>تم التطوير والتصميم بـ ❤️ بواسطة <strong>MAIS ABBAS</strong></span>
+            </div>
+            <div class="security-note">
+                <i class="fas fa-shield-alt"></i>
+                <span>جميع البيانات مخزنة محلياً في جهازك فقط - <strong>maisabbas445@gmail.com</strong></span>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Typing Indicator -->
+    <div class="typing-indicator" id="typingIndicator">
+        <div class="typing-content">
+            <div class="typing-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="typing-text">
+                <div id="typingText">Simply AI Pro يكتب رداً...</div>
+                <div class="typing-dots">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notification Container -->
+    <div id="notificationContainer"></div>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
